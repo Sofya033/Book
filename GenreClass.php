@@ -6,17 +6,20 @@ class GenreClass{
 
 	private $genre;
 
-	public function construct(string $genre, array $genres)
+	public function __construct(string $genre)
 	{
 		$this->genre = $genre;
-		$this->genres = [];
+		array_push($this->genres, $this->genre);
 	}
 
-    public function genreSelection()
+
+	public function addGenre(string $genre)
 	{
-		foreach ($genres as $key => $value) {
-			array_push($value[1], $genre);
-		}
-		return $this->genre;
+		array_push($this->genres, $genre);
 	}
-}
+
+	public function getGenres()
+	{
+		return $this->genres;
+	}
+}  
