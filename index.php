@@ -8,9 +8,10 @@ var_dump($book);
 
 require_once './book/GenreClass.php';
 
-$book = new GenreClass("Трагедия", "Драма", "Любовь");
+$book = new GenreClass("Трагедия");
 
-var_dump($book);
+var_dump($book->getGenres());
+
 
 require_once './book/AuthorClass.php';
 
